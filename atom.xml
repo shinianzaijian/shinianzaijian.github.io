@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shown.top/"/>
-  <updated>2020-05-12T12:41:24.996Z</updated>
+  <updated>2020-05-12T12:43:57.507Z</updated>
   <id>https://www.shown.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.shown.top/basic/java%E5%9F%BA%E7%A1%80/"/>
     <id>https://www.shown.top/basic/java基础/</id>
     <published>2020-05-12T12:20:36.000Z</published>
-    <updated>2020-05-12T12:41:24.996Z</updated>
+    <updated>2020-05-12T12:43:57.507Z</updated>
     
     <summary type="html">
     
@@ -31,6 +31,10 @@
     
       <category term="技术" scheme="https://www.shown.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
+    
+      <category term="web" scheme="https://www.shown.top/tags/web/"/>
+    
+      <category term="阅读" scheme="https://www.shown.top/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
