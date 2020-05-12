@@ -6,16 +6,16 @@
 title: Shown的部落阁
 subtitle:
 description: 用简洁的语言形容繁杂的配置
-keywords:
+keywords: blog, Shown的部落阁, 配置, 资源
 author: Shown Feng
 language: zh-cn
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /
+url: https://www.shown.top
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :type/:title/
 permalink_defaults:
 
 # Directory
