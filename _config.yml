@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.shown.top
+url: /
 root: /
 permalink: :type/:title/
 permalink_defaults:
@@ -82,7 +82,7 @@ deploy:
   repo: 
     github: git@github.com:shinianzaijian/shinianzaijian.github.io.git
     # github: https://github.com/honjun/honjun.github.io.git
-    # coding: https://git.coding.net/hojun/hojun.git
+    # coding: git@gitee.com:shownsheep/shownsheep.git
   branch: master
 
 # backup

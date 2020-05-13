@@ -66,9 +66,9 @@ bgclass: filter-dot
 
 # startdash url, title, desc img
 startdash: 
-  - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
+  - {url: http://www.iocoder.cn/, title: java源码, desc: 深度分析java源码, img: /img/startdash/java.png}
   - {url: https://space.bilibili.com/262158875, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}
-  - {url: /, title: Shown的大树洞, desc: 昏言昏语, img: /img/startdash/wangshiwu.jpg}
+  - {url: /tree/, title: Shown的大树洞, desc: 昏言昏语, img: /img/startdash/wangshiwu.jpg}
 
 
 
@@ -119,3 +119,7 @@ valine: true
 v_appId: P27ub3ugng95kLSdu4WwTElp-gzGzoHsz 
 v_appKey: sJ3Qdwy9tMhJL4qlnrGY6euj
 
+sitemap: 
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml

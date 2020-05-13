@@ -13,7 +13,7 @@ tags:
 	- 阅读
 keywords:
 description: 这是第一篇blog
-photos: https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/touxiang.jpg
+photos: https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg
 type: life
 ---
 # 这是第一篇blog
