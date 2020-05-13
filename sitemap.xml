@@ -37,7 +37,14 @@
   </url>
   
   <url>
-    <loc>https://www.shown.top/comment/index.html</loc>
+    <loc>https://www.shown.top/about/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.shown.top/bangumi/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -45,6 +52,13 @@
   
   <url>
     <loc>https://www.shown.top/client/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.shown.top/comment/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -59,6 +73,13 @@
   
   <url>
     <loc>https://www.shown.top/lab/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.shown.top/links/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -80,27 +101,6 @@
   
   <url>
     <loc>https://www.shown.top/theme-sakura/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.shown.top/bangumi/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.shown.top/links/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.shown.top/about/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
