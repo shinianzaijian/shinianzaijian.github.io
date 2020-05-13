@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/tree/index.html</loc>
+    
+    <lastmod>2020-05-13T14:03:21.725Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/game/%E5%86%92%E9%99%A9%E5%B2%9B%E6%B8%B8%E6%88%8F/</loc>
     
     <lastmod>2020-05-13T13:50:36.485Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>/life/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/</loc>
     
     <lastmod>2020-05-13T02:33:05.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/tree/index.html</loc>
-    
-    <lastmod>2020-05-12T12:00:35.183Z</lastmod>
     
   </url>
   
