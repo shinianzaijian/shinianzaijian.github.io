@@ -931,7 +931,7 @@ html {
     box-sizing:inherit
 }
 body {
-    background:#52494300;
+    background:rgba(256,256,256);
     background-attachment:fixed;
     cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur),auto
 }
@@ -1611,7 +1611,7 @@ a:hover,a:active {
     padding:0 10px;
     margin-left:auto;
     margin-right:auto;
-    background-color:rgba(82.73.67)
+    background-color:rgb(256, 256, 256)
 }
 .post-list {
     margin:0 0 8% 0;
@@ -1788,7 +1788,7 @@ i.iconfont.hotpost {
     font-size:14px
 }
 .post-list-thumb a {
-    color:#ff6d6dd4
+    color:rgba(115, 115, 115)
 }
 .post-list-thumb .post-title h3 {
     text-overflow:ellipsis;
@@ -2015,7 +2015,7 @@ i.iconfont.hotpost {
 }
 .site-footer {
     padding:2%;
-    background:rgba(255,255,255,.8);
+    background:rgba(256, 256, 256);
     max-width:800px;
     margin-left:auto;
     margin-right:auto
@@ -3744,7 +3744,7 @@ a.page-numbers {
     margin-bottom:10px
 }
 }h1.fes-title,h1.main-title {
-    color:#e5bbbb;
+    color:rgb(31, 25, 65);
     font-size:16px;
     font-weight:400;
     padding-bottom:5px;
@@ -3825,7 +3825,7 @@ li.feature-2 {
 .notice {
     padding:20px;
     border:1px dashed #e6e6e6;
-    color:rgba(2, 17, 29, 0.8);
+    color:rgba(31, 25, 65, 0.8);
     position:relative;
     display:inline-block;
     width:100%;
