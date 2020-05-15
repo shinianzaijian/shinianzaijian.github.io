@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-05-15T06:26:00.775Z</updated>
+  <updated>2020-05-15T10:12:53.738Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/taotao/%E6%B7%98%E6%B7%98%E5%95%86%E5%9F%8Eweb%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%9B%98%E5%8F%8A%E6%94%B9%E8%BF%9B/"/>
     <id>/taotao/淘淘商城web项目复盘及改进/</id>
     <published>2020-05-15T06:21:14.000Z</published>
-    <updated>2020-05-15T06:26:00.775Z</updated>
+    <updated>2020-05-15T10:12:53.738Z</updated>
     
     <summary type="html">
     
@@ -109,28 +109,6 @@
       <category term="web" scheme="/tags/web/"/>
     
       <category term="阅读" scheme="/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Theme-Sakura</title>
-    <link href="/undefined/Hexo-Theme-Sakura/"/>
-    <id>/undefined/Hexo-Theme-Sakura/</id>
-    <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2020-03-16T10:41:30.000Z</updated>
-    
-    <summary type="html">
-    
-      hexo-sakura主题使用教程
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
