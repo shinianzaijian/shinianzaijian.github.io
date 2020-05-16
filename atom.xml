@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-05-15T11:10:32.148Z</updated>
+  <updated>2020-05-16T05:58:24.823Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web前后端数据传输json格式的优雅编写</title>
+    <link href="/null/json%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E4%B8%ADpojo%E7%9A%84%E5%8C%85%E8%A3%85%E6%96%B9%E5%BC%8F/"/>
+    <id>/null/json数据传输中pojo的包装方式/</id>
+    <published>2020-05-16T02:38:22.000Z</published>
+    <updated>2020-05-16T05:58:24.823Z</updated>
+    
+    <summary type="html">
+    
+      前后端数据格式化传输
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="技术" scheme="/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>淘淘商城web项目复盘及改进</title>
@@ -43,7 +67,7 @@
     <link href="/game/%E5%86%92%E9%99%A9%E5%B2%9B%E6%B8%B8%E6%88%8F/"/>
     <id>/game/冒险岛游戏/</id>
     <published>2020-05-13T12:26:52.000Z</published>
-    <updated>2020-05-13T13:50:36.485Z</updated>
+    <updated>2020-05-16T01:16:01.246Z</updated>
     
     <summary type="html">
     
@@ -60,11 +84,11 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="技术" scheme="/tags/%E6%8A%80%E6%9C%AF/"/>
+    
       <category term="java" scheme="/tags/java/"/>
     
       <category term="游戏" scheme="/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-      <category term="技术" scheme="/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

@@ -431,85 +431,86 @@
 <li>利用map来制作图片工具类，用来进行项目初始化时只加载需要的图片，提高效率。</li>
 <li>使用枚举类型的数据来标识项目中实体的方向和行为</li>
 <li>利用列表容器来装怪物和子弹</li>
-<li>将图片转换为字节流的工具类<blockquote>
+<li>将图片转换为字节流的工具类</li>
+</ul>
+<blockquote>
 <p>tips：画笔使用的时候需要先取出然后清洗再进行重新赋值颜色</p>
 </blockquote>
-</li>
-</ul>
-<pre><code>public class GameUtil {
+<pre><code class="java">public class GameUtil {
 
-    /**
-     * 根据图片路径进行转换且可以设置图片放大倍数
-     * @param imgpath 图片路径
-     * @param beishu 放大的倍数
-     */
-    public static Image getImage(String imgpath,double beishu) {
-        InputStream imgInput = new GameUtil().getClass().getResourceAsStream(imgpath);
-        Image image = null;
-        try {
-            BufferedImage imgBuffered = ImageIO.read(imgInput);
-            int width = (int) (imgBuffered.getWidth()*beishu);
-            int height = (int) (imgBuffered.getHeight()*beishu);
-            image = imgBuffered.getScaledInstance(width, height, Image.SCALE_DEFAULT);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return image;
+/**
+* 根据图片路径进行转换且可以设置图片放大倍数
+* @param imgpath 图片路径
+* @param beishu 放大的倍数
+*/
+public static Image getImage(String imgpath,double beishu) {
+    InputStream imgInput = new GameUtil().getClass().getResourceAsStream(imgpath);
+    Image image = null;
+    try {
+        BufferedImage imgBuffered = ImageIO.read(imgInput);
+        int width = (int) (imgBuffered.getWidth()*beishu);
+        int height = (int) (imgBuffered.getHeight()*beishu);
+        image = imgBuffered.getScaledInstance(width, height, Image.SCALE_DEFAULT);
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
     }
-
-    /**
-     * 根据图片路径进行转换
-     * @param imgpath 图片路径
-     */
-    public static Image getImage(String imgpath) {
-        InputStream imgInput = new GameUtil().getClass().getResourceAsStream(imgpath);
-        Image image = null;
-        try {
-            BufferedImage imgBuffered = ImageIO.read(imgInput);
-            int width = imgBuffered.getWidth();
-            int height = imgBuffered.getHeight();
-            image = imgBuffered.getScaledInstance(width, height, Image.SCALE_DEFAULT);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return image;
-    }
-
-    /**
-     * 改变图片的一条边
-     * @param imgpath 图片路径
-     * @param bian 边的长度
-     * @param state (0|1)(不改变宽|不改变长)
-     */
-    public static Image getImage(String imgpath,int bian,int state) {
-        InputStream imgInput = new GameUtil().getClass().getResourceAsStream(imgpath);
-        Image image = null;
-        try {
-            BufferedImage imgBuffered = ImageIO.read(imgInput);
-            int width = imgBuffered.getWidth();
-            int height = imgBuffered.getHeight();
-            if(state==0) {
-                height = (int) ((double) bian / width * height) ;
-                width = bian;
-            }else {
-                width = (int) ((double) bian / height * width) ;
-                height = bian;                
-            }
-            image = imgBuffered.getScaledInstance(width, height, Image.SCALE_DEFAULT);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return image;
-    }
+    return image;
 }
 
-</code></pre><ul>
+/**
+    * 根据图片路径进行转换
+    * @param imgpath 图片路径
+    */
+public static Image getImage(String imgpath) {
+    InputStream imgInput = new GameUtil().getClass().getResourceAsStream(imgpath);
+    Image image = null;
+    try {
+        BufferedImage imgBuffered = ImageIO.read(imgInput);
+        int width = imgBuffered.getWidth();
+        int height = imgBuffered.getHeight();
+        image = imgBuffered.getScaledInstance(width, height, Image.SCALE_DEFAULT);
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+    return image;
+}
+
+/**
+    * 改变图片的一条边
+    * @param imgpath 图片路径
+    * @param bian 边的长度
+    * @param state (0|1)(不改变宽|不改变长)
+    */
+public static Image getImage(String imgpath,int bian,int state) {
+    InputStream imgInput = new GameUtil().getClass().getResourceAsStream(imgpath);
+    Image image = null;
+    try {
+        BufferedImage imgBuffered = ImageIO.read(imgInput);
+        int width = imgBuffered.getWidth();
+        int height = imgBuffered.getHeight();
+        if(state==0) {
+            height = (int) ((double) bian / width * height) ;
+            width = bian;
+        }else {
+            width = (int) ((double) bian / height * width) ;
+            height = bian;
+        }
+        image = imgBuffered.getScaledInstance(width, height, Image.SCALE_DEFAULT);
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+    return image;
+}
+}
+
+</code></pre>
+<ul>
 <li>自定义的frame框架及使用</li>
 </ul>
-<pre><code>/**
+<pre><code class="java">/**
  * @ClassName FrameUtil
  * @Description: 窗口初始化工具类
  * @Author Xu Feng
@@ -633,13 +634,14 @@ public class FrameUtil extends Frame implements KeyListener, MouseListener, Mous
     }
 
 }
-</code></pre><ul>
+</code></pre>
+<ul>
 <li>单独进行一个线程来加载音乐</li>
 </ul>
 <blockquote>
-<p><a href="http://www.javazoom.net/javalayer/sources.html" target="_blank" rel="noopener">需要的jl播放器jar包的下载</a> </p>
+<p><a href="http://www.javazoom.net/javalayer/sources.html" target="_blank" rel="noopener">需要的jl播放器jar包的下载</a></p>
 </blockquote>
-<pre><code>package com.feng.untils;
+<pre><code class="java">package com.feng.untils;
 
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
@@ -701,10 +703,11 @@ public class MusicUtil extends Thread {
 
 }
 
-</code></pre><ul>
+</code></pre>
+<ul>
 <li>英雄自由落体的跳跃算法</li>
 </ul>
-<pre><code>    //英雄的跳算法
+<pre><code class="java">    //英雄的跳算法
 
     public static List&lt;Integer&gt; jump(int y){
         double v0 = 30;
@@ -776,7 +779,8 @@ public class MusicUtil extends Thread {
         }
     }
 
-</code></pre><h3 id="该项目完整代码的传送门"><a href="#该项目完整代码的传送门" class="headerlink" title="该项目完整代码的传送门"></a>该项目完整代码的<a href="https://github.com/shinianzaijian/Adventure-Island" target="_blank" rel="noopener">传送门</a></h3>
+</code></pre>
+<h3 id="该项目完整代码的传送门"><a href="#该项目完整代码的传送门" class="headerlink" title="该项目完整代码的传送门"></a>该项目完整代码的<a href="https://github.com/shinianzaijian/Adventure-Island" target="_blank" rel="noopener">传送门</a></h3>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
