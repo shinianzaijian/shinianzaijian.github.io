@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/hyrobort/hyrobort%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-05-17T08:03:12.527Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/selenium/selenium%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-05-17T07:23:45.472Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/webtools/web%E5%BC%80%E5%8F%91%E4%B8%AD%E7%94%A8%E5%88%B0%E7%9A%84%E5%B7%A5%E5%85%B7%E7%B1%BB/</loc>
     
     <lastmod>2020-05-17T07:08:21.066Z</lastmod>
@@ -107,14 +121,14 @@
   </url>
   
   <url>
-    <loc>/links/index.html</loc>
+    <loc>/lab/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>/lab/index.html</loc>
+    <loc>/links/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
