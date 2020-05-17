@@ -418,17 +418,17 @@
         
         <div class="entry-content">
           <h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li>示例的编程语言为java。</li>
-<li>json数据格式的产生就像套娃一样，前几层保证的是内容，只有最后一层才决定你的数据结构。</li>
+<li>示例的编程语言为 java。</li>
+<li>json 数据格式的产生就像套娃一样，前几层保证的是内容，只有最后一层才决定你的数据结构。</li>
 <li>以下面的三个例子作为实现方式。</li>
-<li>充分利用java的继承特性来达到代码的简洁优雅书写。</li>
+<li>充分利用 java 的继承特性来达到代码的简洁优雅书写。</li>
 </ul>
-<h2 id="json数据格式简介"><a href="#json数据格式简介" class="headerlink" title="json数据格式简介"></a>json数据格式简介</h2><ol>
-<li>json数据均以key:value形式进行存储，且用逗号来分隔。</li>
-<li>json数据的{}中均是一个对象。</li>
-<li>json数据中[]里面的数据可以存储一个列表，也就是可以存储多个对象。</li>
+<h2 id="json-数据格式简介"><a href="#json-数据格式简介" class="headerlink" title="json 数据格式简介"></a>json 数据格式简介</h2><ol>
+<li>json 数据均以 key:value 形式进行存储，且用逗号来分隔。</li>
+<li>json 数据的{}中均是一个对象。</li>
+<li>json 数据中[]里面的数据可以存储一个列表，也就是可以存储多个对象。</li>
 </ol>
-<h3 id="例如以下几种json数据"><a href="#例如以下几种json数据" class="headerlink" title="例如以下几种json数据"></a>例如以下几种json数据</h3><pre><code class="json">// 1.在web传输中基本的数据格式
+<h3 id="例如以下几种-json-数据"><a href="#例如以下几种-json-数据" class="headerlink" title="例如以下几种 json 数据"></a>例如以下几种 json 数据</h3><pre><code class="json">// 1.在web传输中基本的数据格式
 {
     &quot;status&quot;:200,
     &quot;msg&quot;:&quot;ok&quot;,
@@ -488,8 +488,8 @@
 
 
 </code></pre>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建一个map用来格式化最外层的json数据"><a href="#创建一个map用来格式化最外层的json数据" class="headerlink" title="创建一个map用来格式化最外层的json数据"></a>创建一个map用来格式化最外层的json数据</h3><blockquote>
-<p>使用了jackson啦产生json数据（如果是web项目只需要使用注解即可实现）</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建一个-map-用来格式化最外层的-json-数据"><a href="#创建一个-map-用来格式化最外层的-json-数据" class="headerlink" title="创建一个 map 用来格式化最外层的 json 数据"></a>创建一个 map 用来格式化最外层的 json 数据</h3><blockquote>
+<p>使用了 jackson 啦产生 json 数据（如果是 web 项目只需要使用注解即可实现）</p>
 </blockquote>
 <pre><code class="java">/**
  * 产生json数据的
@@ -522,13 +522,13 @@ public class JsonMap {
 }
 </code></pre>
 <h4 id="输出效果为"><a href="#输出效果为" class="headerlink" title="输出效果为"></a>输出效果为</h4><pre><code class="json">{
-    &quot;message&quot;: &quot;ok&quot;,
-    &quot;status&quot;: 200,
-    &quot;data&quot;: &quot;yes&quot;,
+  &quot;message&quot;: &quot;ok&quot;,
+  &quot;status&quot;: 200,
+  &quot;data&quot;: &quot;yes&quot;
 }
 </code></pre>
-<h3 id="创建三个pojo类用来模拟传输的数据"><a href="#创建三个pojo类用来模拟传输的数据" class="headerlink" title="创建三个pojo类用来模拟传输的数据"></a>创建三个pojo类用来模拟传输的数据</h3><blockquote>
-<p>三个pojo仅仅是最后一个属性不同<br>Tea的为hobby，Stu为addr，fam为sex<br>下面仅列举其中之一</p>
+<h3 id="创建三个-pojo-类用来模拟传输的数据"><a href="#创建三个-pojo-类用来模拟传输的数据" class="headerlink" title="创建三个 pojo 类用来模拟传输的数据"></a>创建三个 pojo 类用来模拟传输的数据</h3><blockquote>
+<p>三个 pojo 仅仅是最后一个属性不同<br>Tea 的为 hobby，Stu 为 addr，fam 为 sex<br>下面仅列举其中之一</p>
 </blockquote>
 <pre><code class="java">/**
  * 一个名字叫做fam的pojo类
@@ -568,7 +568,7 @@ public class Pojofam {
 }
 
 </code></pre>
-<h2 id="向json中添加1个对象"><a href="#向json中添加1个对象" class="headerlink" title="向json中添加1个对象"></a>向json中添加1个对象</h2><pre><code class="java">public static void main(final String[] args) {
+<h2 id="向-json-中添加-1-个对象"><a href="#向-json-中添加-1-个对象" class="headerlink" title="向 json 中添加 1 个对象"></a>向 json 中添加 1 个对象</h2><pre><code class="java">public static void main(final String[] args) {
         // 创建一个pojo并且设置属性
         Pojofam pojofam = new Pojofam();
         pojofam.setName(&quot;zhangsan&quot;);
@@ -580,17 +580,17 @@ public class Pojofam {
     }
 </code></pre>
 <h3 id="输出结果为"><a href="#输出结果为" class="headerlink" title="输出结果为"></a>输出结果为</h3><pre><code class="json">{
-    &quot;status&quot;: 200,
-    &quot;message&quot;: &quot;ok&quot;,
-    &quot;data&quot;: {
-        &quot;name&quot;: &quot;zhangsan&quot;,
-        &quot;age&quot;: 15,
-        &quot;sex&quot;: &quot;man&quot;
-    }
+  &quot;status&quot;: 200,
+  &quot;message&quot;: &quot;ok&quot;,
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;zhangsan&quot;,
+    &quot;age&quot;: 15,
+    &quot;sex&quot;: &quot;man&quot;
+  }
 }
 </code></pre>
-<h2 id="如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共pojo一类的文件）"><a href="#如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共pojo一类的文件）" class="headerlink" title="如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共pojo一类的文件）"></a>如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共pojo一类的文件）</h2><h3 id="举例说明，在pojofam这个对象上在加入一个date属性的话"><a href="#举例说明，在pojofam这个对象上在加入一个date属性的话" class="headerlink" title="举例说明，在pojofam这个对象上在加入一个date属性的话"></a>举例说明，在pojofam这个对象上在加入一个date属性的话</h3><ol>
-<li>新建pojo类继承pojofam类</li>
+<h2 id="如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共-pojo-一类的文件）"><a href="#如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共-pojo-一类的文件）" class="headerlink" title="如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共 pojo 一类的文件）"></a>如果要想在对象中添加属性，但是不能直接在文件中加入，可以使用继承的方式（建议不要在项目开发到一半的时候去改动已经使用过的公共 pojo 一类的文件）</h2><h3 id="举例说明，在-pojofam-这个对象上在加入一个-date-属性的话"><a href="#举例说明，在-pojofam-这个对象上在加入一个-date-属性的话" class="headerlink" title="举例说明，在 pojofam 这个对象上在加入一个 date 属性的话"></a>举例说明，在 pojofam 这个对象上在加入一个 date 属性的话</h3><ol>
+<li>新建 pojo 类继承 pojofam 类</li>
 </ol>
 <pre><code class="java">/**
  * 一个名字叫做famSon的fam类的子类
@@ -629,7 +629,7 @@ public class PojofamSon extends Pojofam{
 
     public void setDate(String date) {
         this.date = date;
-    }    
+    }
 
 }
 </code></pre>
@@ -647,17 +647,17 @@ public class PojofamSon extends Pojofam{
         System.out.println(json);
     }
 </code></pre>
-<h2 id="下面进行json中的属性谈价列表操作"><a href="#下面进行json中的属性谈价列表操作" class="headerlink" title="下面进行json中的属性谈价列表操作"></a>下面进行json中的属性谈价列表操作</h2><ol>
+<h2 id="下面进行-json-中的属性加入多对象的操作"><a href="#下面进行-json-中的属性加入多对象的操作" class="headerlink" title="下面进行 json 中的属性加入多对象的操作"></a>下面进行 json 中的属性加入多对象的操作</h2><ol>
 <li>理清数据结构的类型</li>
-<li>创建出刚好合适的pojo</li>
-<li>如果发现需要的pojo没有相应的属性，需要再次添加，请参照如上方法</li>
+<li>创建出刚好合适的 pojo</li>
+<li>如果发现需要的 pojo 没有相应的属性，需要再次添加，请参照如上方法</li>
 </ol>
 <h3 id="输出多个不同的对象"><a href="#输出多个不同的对象" class="headerlink" title="输出多个不同的对象"></a>输出多个不同的对象</h3><ol>
-<li>创建pojo，使对象作为属性</li>
+<li>创建 pojo，使对象作为属性</li>
 </ol>
 <pre><code class="java">/**
  * 一个名字叫做PojoObj的pojo类,里面包括了3个pojo对象
- * 
+ *
  * @author Shown
  *
  */
@@ -713,30 +713,30 @@ public class PojoObj {
     }
 </code></pre>
 <h3 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h3><pre><code class="json">{
-    &quot;status&quot;: 200,
-    &quot;message&quot;: &quot;ok&quot;,
-    &quot;data&quot;: {
-        &quot;pojoStu&quot;: {
-            &quot;name&quot;: &quot;zhangsan&quot;,
-            &quot;age&quot;: 0,
-            &quot;sex&quot;: null
-        },
-        &quot;pojoTea&quot;: {
-            &quot;name&quot;: &quot;wangwu&quot;,
-            &quot;age&quot;: 0,
-            &quot;sex&quot;: null
-        },
-        &quot;pojofam&quot;: {
-            &quot;name&quot;: &quot;lisi&quot;,
-            &quot;age&quot;: 0,
-            &quot;sex&quot;: null
-        }
+  &quot;status&quot;: 200,
+  &quot;message&quot;: &quot;ok&quot;,
+  &quot;data&quot;: {
+    &quot;pojoStu&quot;: {
+      &quot;name&quot;: &quot;zhangsan&quot;,
+      &quot;age&quot;: 0,
+      &quot;sex&quot;: null
+    },
+    &quot;pojoTea&quot;: {
+      &quot;name&quot;: &quot;wangwu&quot;,
+      &quot;age&quot;: 0,
+      &quot;sex&quot;: null
+    },
+    &quot;pojofam&quot;: {
+      &quot;name&quot;: &quot;lisi&quot;,
+      &quot;age&quot;: 0,
+      &quot;sex&quot;: null
     }
+  }
 }
 </code></pre>
-<h2 id="列表封装pojo，实现json输出列表"><a href="#列表封装pojo，实现json输出列表" class="headerlink" title="列表封装pojo，实现json输出列表"></a>列表封装pojo，实现json输出列表</h2><pre><code class="java">/**
+<h2 id="列表封装-pojo，实现-json-输出列表"><a href="#列表封装-pojo，实现-json-输出列表" class="headerlink" title="列表封装 pojo，实现 json 输出列表"></a>列表封装 pojo，实现 json 输出列表</h2><pre><code class="java">/**
  * 一个名字叫做PojoObjList的pojo类,里面包括了2个pojo对象和一个列表对象
- * 
+ *
  * @author Shown
  *
  */
@@ -798,32 +798,35 @@ public class PojoObjlist {
     }
 </code></pre>
 <h3 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h3><pre><code class="json">{
-    &quot;status&quot;: 200,
-    &quot;message&quot;: &quot;ok&quot;,
-    &quot;data&quot;: {
-        &quot;pojoStu&quot;: {
-            &quot;name&quot;: &quot;zhangsan&quot;,
-            &quot;age&quot;: 0,
-            &quot;sex&quot;: null
-        },
-        &quot;pojoTea&quot;: {
-            &quot;name&quot;: &quot;wangwu&quot;,
-            &quot;age&quot;: 0,
-            &quot;sex&quot;: null
-        },
-        &quot;pojofam&quot;: [{
-            &quot;name&quot;: &quot;lisi2&quot;,
-            &quot;age&quot;: 0,
-            &quot;sex&quot;: null
-        }, {
-            &quot;name&quot;: null,
-            &quot;age&quot;: 0,
-            &quot;sex&quot;: null
-        }]
-    }
+  &quot;status&quot;: 200,
+  &quot;message&quot;: &quot;ok&quot;,
+  &quot;data&quot;: {
+    &quot;pojoStu&quot;: {
+      &quot;name&quot;: &quot;zhangsan&quot;,
+      &quot;age&quot;: 0,
+      &quot;sex&quot;: null
+    },
+    &quot;pojoTea&quot;: {
+      &quot;name&quot;: &quot;wangwu&quot;,
+      &quot;age&quot;: 0,
+      &quot;sex&quot;: null
+    },
+    &quot;pojofam&quot;: [
+      {
+        &quot;name&quot;: &quot;lisi2&quot;,
+        &quot;age&quot;: 0,
+        &quot;sex&quot;: null
+      },
+      {
+        &quot;name&quot;: null,
+        &quot;age&quot;: 0,
+        &quot;sex&quot;: null
+      }
+    ]
+  }
 }
 </code></pre>
-<h2 id="总结：以上方法均可交叉使用，最后看的只是套娃pojo的最后一层，决定了你的json数据结构和显示方式。"><a href="#总结：以上方法均可交叉使用，最后看的只是套娃pojo的最后一层，决定了你的json数据结构和显示方式。" class="headerlink" title="总结：以上方法均可交叉使用，最后看的只是套娃pojo的最后一层，决定了你的json数据结构和显示方式。"></a>总结：以上方法均可交叉使用，最后看的只是套娃pojo的最后一层，决定了你的json数据结构和显示方式。</h2>
+<h2 id="总结：以上方法均可交叉使用，最后看的只是套娃-pojo-的最后一层，决定了你的-json-数据结构和显示方式。"><a href="#总结：以上方法均可交叉使用，最后看的只是套娃-pojo-的最后一层，决定了你的-json-数据结构和显示方式。" class="headerlink" title="总结：以上方法均可交叉使用，最后看的只是套娃 pojo 的最后一层，决定了你的 json 数据结构和显示方式。"></a>总结：以上方法均可交叉使用，最后看的只是套娃 pojo 的最后一层，决定了你的 json 数据结构和显示方式。</h2>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
