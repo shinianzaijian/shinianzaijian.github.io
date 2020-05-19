@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Category: 技术 | Shown的部落阁</title>
+  <title itemprop="name">springboot初体验 | Shown的部落阁</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -381,567 +381,176 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/Spring-boot-logo.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/Spring-boot-logo.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      springboot初体验</h1>
+      <p class="entry-census">
+        <span>
+          <a href="shown.top">
+            <img src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/images/avatarsmall.png">
+          </a>
+        </span>
+        <span>
+          <a href="shown.top">Shown Feng</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-5-19<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">野生技术协会</h1>
-    <span class="cat-des">
-      <p>Geek – Only for Love</p>
-    </span>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="一、springboot快速开始"><a href="#一、springboot快速开始" class="headerlink" title="一、springboot快速开始"></a>一、springboot快速开始</h2><ul>
+<li>使用的工具SpringToolsSuit</li>
+<li><a href="https://spring.io/tools#suite-three" target="_blank" rel="noopener">STS的官网</a></li>
+<li>使用maven统一处理jar包</li>
+<li>使用快速spring Start Project快速生成springboot项目</li>
+</ul>
+<h2 id="二、新建一个springboot项目"><a href="#二、新建一个springboot项目" class="headerlink" title="二、新建一个springboot项目"></a>二、新建一个springboot项目</h2><ol>
+<li>打开sts工具，配置好maven的seeting文件夹的位置</li>
+<li>点击file-&gt;new-&gt;Spring Start Project<br><img data-action="zoom" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/springa.png" alt="新建页面"></li>
+<li>然后点击下一步（勾选上spring Web组件）<br><img data-action="zoom" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/springb.png" alt="下一步"></li>
+<li>点击next-&gt;Finish完成</li>
+<li>等待jar包导入完成</li>
+</ol>
+<h2 id="Spring文件结构"><a href="#Spring文件结构" class="headerlink" title="Spring文件结构"></a>Spring文件结构</h2><p><img data-action="zoom" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/springc.png" alt="spring的文件结构"></p>
+<p>修改的代码位置及内容：</p>
+<pre><code class="xml">&lt;properties&gt;
+    &lt;maven-jar-plugin.version&gt;3.1.1&lt;/maven-jar-plugin.version&gt;
+    &lt;java.version&gt;1.8&lt;/java.version&gt;
+&lt;/properties&gt;
+</code></pre>
+<h2 id="新建一个测试Controller"><a href="#新建一个测试Controller" class="headerlink" title="新建一个测试Controller"></a>新建一个测试Controller</h2><ol>
+<li>如spring文件结构图，在com.feng.demo下新建一个controller包命名为：DemoController.java</li>
+<li>向里面写入如下测试代码：</li>
+</ol>
+<pre><code class="java">package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author Shown
+   * 第一个测试实例跳转
+ */
+@RestController
+public class DemoController {
+
+    @RequestMapping(&quot;/index&quot;)
+    public String getIndexPage() {
+        return &quot;This is indexPage!&quot;;
+    }
+
+}
+</code></pre>
+<ol start="3">
+<li>运行Demo01Application.java启动类</li>
+</ol>
+<h2 id="测试是否返回正确"><a href="#测试是否返回正确" class="headerlink" title="测试是否返回正确"></a>测试是否返回正确</h2><ul>
+<li>打开浏览器输入localhost:8080/index</li>
+</ul>
+<p>显示如下网页内容,即代表已经运行成功<br><img data-action="zoom" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/springs.png" alt="success"></p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><ul>
+<li>springboot+Thymeleaf（前台数据接收展示）+mybatis-Pluse（mybatis多数据源）+ shiro（安全实现策略）完整后台服务服务层框架</li>
+</ul>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/custom/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/custom/donate/WeChanQR1.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/hyrobort/hyrobort的使用/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/hyrobort.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/hyrobort.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                hyrobort的使用</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/springboot/springboot初体验/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/Spring-boot-logo.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/springboot/springboot初体验/">
-    springboot初体验</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-19</div>
-    <p>
-    springboot初体验</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/springboot/springboot初体验/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/hyrobort/hyrobort的使用/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/hyrobort.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/hyrobort/hyrobort的使用/">
-    hyrobort的使用</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-17</div>
-    <p>
-    自动化测试框架</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/hyrobort/hyrobort的使用/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/selenium/selenium快速使用/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/ptest.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/selenium/selenium快速使用/">
-    selenium快速使用</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-17</div>
-    <p>
-    selenium</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/selenium/selenium快速使用/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/webtools/web开发中用到的工具类/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/webtools.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/webtools/web开发中用到的工具类/">
-    web开发中用到的工具类</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-17</div>
-    <p>
-    web项目工具类合集</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/webtools/web开发中用到的工具类/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/null/json数据传输中pojo的包装方式/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/coding.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/null/json数据传输中pojo的包装方式/">
-    web前后端数据传输json格式的优雅编写</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-16</div>
-    <p>
-    前后端数据格式化传输</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/null/json数据传输中pojo的包装方式/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/taotao/淘淘商城web项目复盘及改进/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/shop.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/taotao/淘淘商城web项目复盘及改进/">
-    淘淘商城web项目复盘及改进</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-15</div>
-    <p>
-    web项目</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/taotao/淘淘商城web项目复盘及改进/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/game/冒险岛游戏/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/mapstyle.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/game/冒险岛游戏/">
-    冒险岛游戏设计实现和GUI工具</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-13</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/game/冒险岛游戏/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/basic/java基础进阶细节/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/javajc.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/basic/java基础进阶细节/">
-    java基础进阶细节</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-12</div>
-    <p>
-    java升天基础</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/basic/java基础进阶细节/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "P27ub3ugng95kLSdu4WwTElp-gzGzoHsz",
+        appKey: "sJ3Qdwy9tMhJL4qlnrGY6euj",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="shown.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/images/avatarsmall.png" itemprop="image" alt="Shown Feng" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="shown.top" itemprop="url" rel="author">Shown Feng</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
 
-<!-- 
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/springboot/springboot初体验/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/Spring-boot-logo.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/springboot/springboot初体验/">
-    springboot初体验</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-19</div>
-    <p>
-    springboot初体验</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/springboot/springboot初体验/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/hyrobort/hyrobort的使用/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/hyrobort.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/hyrobort/hyrobort的使用/">
-    hyrobort的使用</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-17</div>
-    <p>
-    自动化测试框架</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/hyrobort/hyrobort的使用/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/selenium/selenium快速使用/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/ptest.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/selenium/selenium快速使用/">
-    selenium快速使用</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-17</div>
-    <p>
-    selenium</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/selenium/selenium快速使用/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/webtools/web开发中用到的工具类/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/webtools.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/webtools/web开发中用到的工具类/">
-    web开发中用到的工具类</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-17</div>
-    <p>
-    web项目工具类合集</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/webtools/web开发中用到的工具类/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/null/json数据传输中pojo的包装方式/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/coding.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/null/json数据传输中pojo的包装方式/">
-    web前后端数据传输json格式的优雅编写</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-16</div>
-    <p>
-    前后端数据格式化传输</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/null/json数据传输中pojo的包装方式/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/taotao/淘淘商城web项目复盘及改进/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/shop.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/taotao/淘淘商城web项目复盘及改进/">
-    淘淘商城web项目复盘及改进</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-15</div>
-    <p>
-    web项目</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/taotao/淘淘商城web项目复盘及改进/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/game/冒险岛游戏/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/mapstyle.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/game/冒险岛游戏/">
-    冒险岛游戏设计实现和GUI工具</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-13</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/game/冒险岛游戏/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/basic/java基础进阶细节/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/javajc.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/basic/java基础进阶细节/">
-    java基础进阶细节</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-12</div>
-    <p>
-    java升天基础</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/basic/java基础进阶细节/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
 
- -->
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
