@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Shown的部落阁</title>
+  <title itemprop="name">设计模式-动态代理 | Shown的部落阁</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -381,516 +381,334 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/sjmodtdl.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/sjmodtdl.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      设计模式-动态代理</h1>
+      <p class="entry-census">
+        <span>
+          <a href="shown.top">
+            <img src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/images/avatarsmall.png">
+          </a>
+        </span>
+        <span>
+          <a href="shown.top">Shown Feng</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-5-22<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">这是一个没有毕业大学生的blog</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  关于我</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/tools/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/startdash/java.png">
-        </div>
-        <div class="info">
-          <h3>工具集合</h3>
-          <p>自用win工具</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="https://space.bilibili.com/262158875" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/startdash/bilibili.jpg">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>博主的b站视频</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/tree/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/startdash/wangshiwu.jpg">
-        </div>
-        <div class="info">
-          <h3>Shown的大树洞</h3>
-          <p>昏言昏语</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      文章列表</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="设计模式-动态代理"><a href="#设计模式-动态代理" class="headerlink" title="设计模式-动态代理"></a>设计模式-动态代理</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
+<p>动态代理是Java语言中非常经典的一种设计模式，也是所有设计模式中最难理解的一种。本文将通过一个简单的例子模拟JDK动态代理实现，让你彻底明白动态代理设计模式的本质，文章中可能会涉及到一些你没有学习过的知识点或概念。如果恰好遇到了这些知识盲点，请先去学习这部分知识，再来阅读这篇文章。</p>
+</blockquote>
+<h3 id="什么是代理"><a href="#什么是代理" class="headerlink" title="什么是代理"></a>什么是代理</h3><p>从字面意思来看，代理比较好理解，无非就是代为处理的意思。举个例子，你在上大学的时候，总是喜欢逃课。因此，你拜托你的同学帮你答到，而自己却窝在宿舍玩游戏… 你的这个同学恰好就充当了代理的作用，代替你去上课。</p>
+<p>是的，你没有看错，代理就是这么简单！</p>
+<p>理解了代理的意思，你脑海中恐怕还有两个巨大的疑问：</p>
+<ul>
+<li>怎么实现代理模式？  <ul>
+<li>继承</li>
+<li>聚合</li>
+</ul>
+</li>
+<li>代理模式有什么实际用途？  <ul>
+<li>例如：在方法执行前后记录日志</li>
+</ul>
+</li>
+</ul>
+<h3 id="继承方式实现动态代理"><a href="#继承方式实现动态代理" class="headerlink" title="继承方式实现动态代理"></a>继承方式实现动态代理</h3><ul>
+<li>创建一个飞行类，在执行方法前后分别记录一个随机的时间，并且在执行方法后输出所需要的时间</li>
+</ul>
+<pre><code class="java">// 接口类
+public interface Flyable {
+    void fly();
+}
+
+// 实现类
+public class Bird implements Flyable {
+
+    @Override
+    public void fly() {
+        System.out.println(&quot;Bird is flying...&quot;);
+        try {
+            Thread.sleep(new Random().nextInt(1000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<ul>
+<li>以继承的方式添加记录新建bird2类</li>
+</ul>
+<pre><code class="java">public class Bird2 extends Bird {
+
+    @Override
+    public void fly() {
+        long start = System.currentTimeMillis();
+
+        super.fly();
+
+        long end = System.currentTimeMillis();
+        System.out.println(&quot;Fly time = &quot; + (end - start));
+    }
+}
+
+</code></pre>
+<blockquote>
+<p>问题：使用该方式如果要是在飞行前后新增日志打印，可以再次继承Bird2然后再在父类方法执行前后增加日志的输出操作，如果要是先计算时间，然后再输出日志信息呢？就要用下面的方式</p>
+</blockquote>
+<h3 id="聚合方式实现动态代理"><a href="#聚合方式实现动态代理" class="headerlink" title="聚合方式实现动态代理"></a>聚合方式实现动态代理</h3><ul>
+<li>以聚合的方式添加记录新建BirdTimeProxy类</li>
+<li>利用了java的多态的特性</li>
+</ul>
+<pre><code class="java">public class BirdTimeProxy implements Flyable {
+    private Bird bird;
+
+    public Bird3(Bird bird) {
+        this.bird = bird;
+    }
+
+    @Override
+    public void fly() {
+        long start = System.currentTimeMillis();
+
+        bird.fly();
+
+        long end = System.currentTimeMillis();
+        System.out.println(&quot;Fly time = &quot; + (end - start));
+    }
+}
+
+</code></pre>
+<ul>
+<li>若要输出日志，只需要建立如下类BirdLogProxy</li>
+</ul>
+<pre><code class="java">public class BirdLogProxy implements Flyable {
+    private Flyable flyable;
+
+    public BirdLogProxy(Flyable flyable) {
+        this.flyable = flyable;
+    }
+
+    @Override
+    public void fly() {
+        System.out.println(&quot;Bird fly start...&quot;);
+
+        flyable.fly();
+
+        System.out.println(&quot;Bird fly end...&quot;);
+    }
+}
+</code></pre>
+<h3 id="调用方法并运行"><a href="#调用方法并运行" class="headerlink" title="调用方法并运行"></a>调用方法并运行</h3><ul>
+<li>先打印日志在输出时间</li>
+</ul>
+<pre><code class="java">    public static void main(String[] args) {
+        Bird bird = new Bird();
+        BirdLogProxy p1 = new BirdLogProxy(bird);
+        BirdTimeProxy p2 = new BirdTimeProxy(p1);
+
+        p2.fly();
+    }
+</code></pre>
+<ul>
+<li>反过来,这么做也可</li>
+</ul>
+<pre><code class="java"> public static void main(String[] args) {
+        Bird bird = new Bird();
+        BirdTimeProxy p2 = new BirdTimeProxy(bird);
+        BirdLogProxy p1 = new BirdLogProxy(p2);
+
+        p1.fly();
+ }
+</code></pre>
+<h3 id="这就是简单的静态代理方式，对没错这只是静态代理方式，至于动态代理就是，用一种静态代理方法来实现多种方法的类。显然这里通过反射机制是不能实现的。"><a href="#这就是简单的静态代理方式，对没错这只是静态代理方式，至于动态代理就是，用一种静态代理方法来实现多种方法的类。显然这里通过反射机制是不能实现的。" class="headerlink" title="这就是简单的静态代理方式，对没错这只是静态代理方式，至于动态代理就是，用一种静态代理方法来实现多种方法的类。显然这里通过反射机制是不能实现的。"></a>这就是简单的静态代理方式，对没错这只是静态代理方式，至于动态代理就是，用一种静态代理方法来实现多种方法的类。显然这里通过反射机制是不能实现的。</h3><h3 id="spring中的jdk动态代理以及cglib动态代理"><a href="#spring中的jdk动态代理以及cglib动态代理" class="headerlink" title="spring中的jdk动态代理以及cglib动态代理"></a>spring中的jdk动态代理以及cglib动态代理</h3><h4 id="一、原理区别"><a href="#一、原理区别" class="headerlink" title="一、原理区别"></a>一、原理区别</h4><p>java动态代理是利用反射机制生成一个实现代理接口的匿名类，在调用具体方法前调用InvokeHandler来处理。</p>
+<p>而cglib动态代理是利用asm开源包，对代理对象类的class文件加载进来，通过修改其字节码生成子类来处理。</p>
+<p>1、如果目标对象实现了接口，默认情况下会采用JDK的动态代理实现AOP<br>2、如果目标对象实现了接口，可以强制使用CGLIB实现AOP </p>
+<p>3、如果目标对象没有实现了接口，必须采用CGLIB库，spring会自动在JDK动态代理和CGLIB之间转换</p>
+<p>JDK动态代理和CGLIB字节码生成的区别？<br> （1）JDK动态代理只能对实现了接口的类生成代理，而不能针对类<br> （2）CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法<br>   因为是继承，所以该类或方法最好不要声明成final </p>
+<ul>
+<li>JDK动态代理的简单实现</li>
+</ul>
+<pre><code class="java">package com.lf.shejimoshi.proxy.jdk;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+import com.lf.shejimoshi.proxy.entity.UserManager;
+import com.lf.shejimoshi.proxy.entity.UserManagerImpl;
+//JDK动态代理实现InvocationHandler接口
+public class JdkProxy implements InvocationHandler {
+    private Object target ;//需要代理的目标对象
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println(&quot;JDK动态代理，监听开始！&quot;);
+        Object result = method.invoke(target, args);
+        System.out.println(&quot;JDK动态代理，监听结束！&quot;);
+        return result;
+    }
+    //定义获取代理对象方法
+    private Object getJDKProxy(Object targetObject){
+        //为目标对象target赋值
+        this.target = targetObject;
+        //JDK动态代理只能针对实现了接口的类进行代理，newProxyInstance 函数所需参数就可看出
+        return Proxy.newProxyInstance(targetObject.getClass().getClassLoader(), targetObject.getClass().getInterfaces(), this);
+    }
+
+    public static void main(String[] args) {
+        JdkProxy jdkProxy = new JdkProxy();//实例化JDKProxy对象
+        UserManager user = (UserManager) jdkProxy.getJDKProxy(new UserManagerImpl());//获取代理对象,传入需要代理的接口实现的对象
+        user.addUser(&quot;admin&quot;, &quot;123123&quot;);//执行新增方法
+    } 
+}
+</code></pre>
+<ul>
+<li>cglib动态代理使用</li>
+</ul>
+<pre><code class="java">package com.lf.shejimoshi.proxy.cglib;
+
+import java.lang.reflect.Method;
+
+import com.lf.shejimoshi.proxy.entity.UserManager;
+import com.lf.shejimoshi.proxy.entity.UserManagerImpl;
+
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
+//Cglib动态代理，实现MethodInterceptor接口
+public class CglibProxy implements MethodInterceptor {
+    private Object target;//需要代理的目标对象
+
+    //重写拦截方法
+    @Override
+    public Object intercept(Object obj, Method method, Object[] arr, MethodProxy proxy) throws Throwable {
+        System.out.println(&quot;Cglib动态代理，监听开始！&quot;);
+        Object invoke = method.invoke(target, arr);//方法执行，参数：target 目标对象 arr参数数组
+        System.out.println(&quot;Cglib动态代理，监听结束！&quot;);
+        return invoke;
+    }
+    //定义获取代理对象方法
+    public Object getCglibProxy(Object objectTarget){
+        //为目标对象target赋值
+        this.target = objectTarget;
+        Enhancer enhancer = new Enhancer();
+        //设置父类,因为Cglib是针对指定的类生成一个子类，所以需要指定父类
+        enhancer.setSuperclass(objectTarget.getClass());
+        enhancer.setCallback(this);// 设置回调 
+        Object result = enhancer.create();//创建并返回代理对象
+        return result;
+    }
+
+    public static void main(String[] args) {
+        CglibProxy cglib = new CglibProxy();//实例化CglibProxy对象
+        UserManager user =  (UserManager) cglib.getCglibProxy(new UserManagerImpl());//获取代理对象
+        user.delUser(&quot;admin&quot;);//执行删除方法
+    }
+
+}
+</code></pre>
+<h3 id="以上原理即可解释springboot框架中的-async（）注释的失效之谜"><a href="#以上原理即可解释springboot框架中的-async（）注释的失效之谜" class="headerlink" title="以上原理即可解释springboot框架中的@async（）注释的失效之谜"></a>以上原理即可解释springboot框架中的@async（）注释的失效之谜</h3>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/custom/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/custom/donate/WeChanQR1.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/springboot/springboot初体验/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/springindex1.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/springindex1.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                springboot初体验</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "P27ub3ugng95kLSdu4WwTElp-gzGzoHsz",
+        appKey: "sJ3Qdwy9tMhJL4qlnrGY6euj",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/sjms/设计模式-动态代理/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/sjmodtdl.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-22 12:05</div>
-      <a href="/sjms/设计模式-动态代理/" class="post-title">
-        <h3>设计模式-动态代理</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/技术/">技术<em>·</em></a>
-          
-            <a href="/tags/设计模式/">设计模式<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/sjms/设计模式-动态代理/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="shown.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/images/avatarsmall.png" itemprop="image" alt="Shown Feng" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="shown.top" itemprop="url" rel="author">Shown Feng</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/springboot/springboot初体验/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/springindex1.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-19 19:05</div>
-      <a href="/springboot/springboot初体验/" class="post-title">
-        <h3>springboot初体验</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/springboot/">springboot<em>·</em></a>
-          
-            <a href="/tags/框架/">框架<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>springboot初体验</p>
-        <div class="post-bottom">
-          <a href="/springboot/springboot初体验/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/hyrobort/hyrobort的使用/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/hyrobort.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-17 15:05</div>
-      <a href="/hyrobort/hyrobort的使用/" class="post-title">
-        <h3>hyrobort的使用</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/python/">python<em>·</em></a>
-          
-            <a href="/tags/自动化/">自动化<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>自动化测试框架</p>
-        <div class="post-bottom">
-          <a href="/hyrobort/hyrobort的使用/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/selenium/selenium快速使用/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/ptest.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-17 15:05</div>
-      <a href="/selenium/selenium快速使用/" class="post-title">
-        <h3>selenium快速使用</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/python/">python<em>·</em></a>
-          
-            <a href="/tags/自动化测试/">自动化测试<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>selenium</p>
-        <div class="post-bottom">
-          <a href="/selenium/selenium快速使用/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/webtools/web开发中用到的工具类/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/webtools.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-17 14:05</div>
-      <a href="/webtools/web开发中用到的工具类/" class="post-title">
-        <h3>web开发中用到的工具类</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/资源/">资源<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>web项目工具类合集</p>
-        <div class="post-bottom">
-          <a href="/webtools/web开发中用到的工具类/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/null/json数据传输中pojo的包装方式/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/coding.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-16 10:05</div>
-      <a href="/null/json数据传输中pojo的包装方式/" class="post-title">
-        <h3>web前后端数据传输json格式的优雅编写</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/技术/">技术<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>前后端数据格式化传输</p>
-        <div class="post-bottom">
-          <a href="/null/json数据传输中pojo的包装方式/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/taotao/淘淘商城web项目复盘及改进/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/shop.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-15 14:05</div>
-      <a href="/taotao/淘淘商城web项目复盘及改进/" class="post-title">
-        <h3>淘淘商城web项目复盘及改进</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>web项目</p>
-        <div class="post-bottom">
-          <a href="/taotao/淘淘商城web项目复盘及改进/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/game/冒险岛游戏/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/mapstyle.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-13 20:05</div>
-      <a href="/game/冒险岛游戏/" class="post-title">
-        <h3>冒险岛游戏设计实现和GUI工具</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/技术/">技术<em>·</em></a>
-          
-            <a href="/tags/java/">java<em>·</em></a>
-          
-            <a href="/tags/游戏/">游戏<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/game/冒险岛游戏/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/basic/java基础进阶细节/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/2020.5.12/javajc.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-12 20:05</div>
-      <a href="/basic/java基础进阶细节/" class="post-title">
-        <h3>java基础进阶细节</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/阅读/">阅读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>java升天基础</p>
-        <div class="post-bottom">
-          <a href="/basic/java基础进阶细节/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/life/我的第一篇blog/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-5-12 11:05</div>
-      <a href="/life/我的第一篇blog/" class="post-title">
-        <h3>人总是在变，但是影视和音乐不变，资源分享。</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/阅读/">阅读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/生活/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>这是第一篇blog</p>
-        <div class="post-bottom">
-          <a href="/life/我的第一篇blog/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!--  -->
-  </div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
