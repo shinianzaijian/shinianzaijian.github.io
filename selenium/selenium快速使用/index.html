@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>selenium快速使用 | Shown的部落阁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="selenium">
+<meta name="keywords" content="python,自动化测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="selenium快速使用">
+<meta property="og:url" content="/selenium/selenium快速使用/index.html">
+<meta property="og:site_name" content="Shown的部落阁">
+<meta property="og:description" content="selenium">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/ptest.png">
+<meta property="og:updated_time" content="2020-05-17T07:23:45.472Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="selenium快速使用">
+<meta name="twitter:description" content="selenium">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/ptest.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Shown的部落阁" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Shown的部落阁</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-selenium快速使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/selenium/selenium快速使用/" class="article-date">
+  <time datetime="2020-05-17T07:13:16.000Z" itemprop="datePublished">2020-05-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/ptest.png" rel="gallery_ckzh6gugt000bnk97a1ipaz40">
+        <img src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/myimages/ptest.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      selenium快速使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="selenium的快速使用"><a href="#selenium的快速使用" class="headerlink" title="selenium的快速使用"></a>selenium的快速使用</h2><pre><code class="python">from selenium import webdriver
+
+wd = webdriver.Chrome()
+// 设置超时时间
+wd.implicitly_wait(10)
+// 设置打来网址
+wd.get(&#39;http://www.51job.com&#39;)
+// 选择器定位元素
+element = wd.find_element_by_id(&#39;work_position_input&#39;)
+
+element.click()
+
+elements = wd.find_elements_by_css_selector(&#39;#work_position_click_center_right em.on&#39;)
+
+for element in elements:
+    element.click()
+
+wd.find_element_by_id(&#39;work_position_click_center_right_list_category_000000_010000&#39;).click()
+
+wd.find_element_by_id(&#39;work_position_click_bottom_save&#39;).click()
+
+wd.find_element_by_id(&#39;kwdselectid&#39;).send_keys(&#39;自动化测试工程\n&#39;)
+// 接收标签中的内容
+elements = wd.find_elements_by_css_selector(&#39;div.dw_table &gt; div.el&#39;)
+
+for element in elements:
+    print(element.text)
+// 退出
+wd.quit()
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="/selenium/selenium快速使用/" data-id="ckzh6gugt000bnk97a1ipaz40" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动化测试/">自动化测试</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hyrobort/hyrobort的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hyrobort的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/webtools/web开发中用到的工具类/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">web开发中用到的工具类</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/悦读/">悦读</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自动化/">自动化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自动化测试/">自动化测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/资源/">资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/阅读/">阅读</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/悦读/" style="font-size: 13.33px;">悦读</a> <a href="/tags/技术/" style="font-size: 16.67px;">技术</a> <a href="/tags/框架/" style="font-size: 10px;">框架</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/自动化/" style="font-size: 10px;">自动化</a> <a href="/tags/自动化测试/" style="font-size: 10px;">自动化测试</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/资源/" style="font-size: 10px;">资源</a> <a href="/tags/阅读/" style="font-size: 16.67px;">阅读</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/null/小白算法记/">小白算法记</a>
+          </li>
+        
+          <li>
+            <a href="/sjms/设计模式-动态代理/">设计模式-动态代理</a>
+          </li>
+        
+          <li>
+            <a href="/springboot/springboot初体验/">springboot初体验</a>
+          </li>
+        
+          <li>
+            <a href="/hyrobort/hyrobort的使用/">hyrobort的使用</a>
+          </li>
+        
+          <li>
+            <a href="/selenium/selenium快速使用/">selenium快速使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Shown Feng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
