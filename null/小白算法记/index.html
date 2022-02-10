@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: springboot | Shown的部落阁</title>
+  <title itemprop="name">小白算法记 | Shown的部落阁</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -381,64 +381,142 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="springboot.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-  </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">springboot</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/springboot/springboot初体验/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">小白算法记</h1>
+            <p class="entry-census">Shown Feng&nbsp;·&nbsp;2022-2-10&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <h2 id="算法记（一）"><a href="#算法记（一）" class="headerlink" title="算法记（一）"></a>算法记（一）</h2><p>时隔一年多，从求学到求生，经过了一段时间的工作，从当初的忙于应付工作，到现在的游刃有余，从最初对生活充满信心到迷茫，在此，我十分感谢，在我生活工作当中帮助过我或者陪我聊了很多的朋友，张静姐，牛涛哥，杨哥，亚楠姐，在我最迷茫无助的时候和我聊了很多，让我重新沉下心来思考。还要感谢我的老师周宇宁，让我重新记起了原来的自己。</p>
+<h3 id="二叉树的中序后序前序遍历"><a href="#二叉树的中序后序前序遍历" class="headerlink" title="二叉树的中序后序前序遍历"></a>二叉树的中序后序前序遍历</h3><p>废话不多说，先贴上代码<br>1.递归方式</p>
+<pre><code>/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    List&lt;Integer&gt; ans;
+    public List&lt;Integer&gt; preorderTraversal(TreeNode root) {
+        ans = new ArrayList&lt;Integer&gt;();
+        dfs(root, ans);
+        return ans;
+    }
+
+    public void dfs(TreeNode root, List&lt;Integer&gt; ans){
+        if(root == null){
+            return;
+        }
+        ans.add(root.val);
+        dfs(root.left, ans);
+        dfs(root.right, ans);
+    }
+
+}
+</code></pre><p>递归方式的核心就是分解成最小化问题。分治思想。</p>
+
         </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/springindex1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/springboot/springboot初体验/">
-    springboot初体验</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-5-19</div>
-    <p>
-    springboot初体验</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/springboot/springboot初体验/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/custom/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/img/custom/donate/WeChanQR1.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/sjms/设计模式-动态代理/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/sjmodtdl.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/shinianzaijian/myimg/img/sjmodtdl.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                设计模式-动态代理</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "P27ub3ugng95kLSdu4WwTElp-gzGzoHsz",
+        appKey: "sJ3Qdwy9tMhJL4qlnrGY6euj",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="shown.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/cdn/images/avatarsmall.png" itemprop="image" alt="Shown Feng" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="shown.top" itemprop="url" rel="author">Shown Feng</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
