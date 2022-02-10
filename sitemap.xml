@@ -128,13 +128,6 @@
   </url>
   
   <url>
-    <loc>/donate/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/comment/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
@@ -143,6 +136,13 @@
   
   <url>
     <loc>/lab/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/donate/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
