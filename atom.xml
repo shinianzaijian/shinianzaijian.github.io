@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-02-10T15:57:06.219Z</updated>
+  <updated>2022-02-11T14:22:37.618Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法小技巧</title>
+    <link href="/null/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>/null/算法小技巧/</id>
+    <published>2022-02-11T14:18:51.000Z</published>
+    <updated>2022-02-11T14:22:37.618Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;算法与数据结构的技巧&quot;&gt;&lt;a href=&quot;#算法与数据结构的技巧&quot; class=&quot;headerlink&quot; title=&quot;算法与数据结构的技巧&quot;&gt;&lt;/a&gt;算法与数据结构的技巧&lt;/h2&gt;&lt;p&gt;leetcode 103
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="阅读" scheme="/tags/%E9%98%85%E8%AF%BB/"/>
+    
+      <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>小白算法记</title>
