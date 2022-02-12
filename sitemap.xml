@@ -121,7 +121,14 @@
   </url>
   
   <url>
-    <loc>/comment/index.html</loc>
+    <loc>/about/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/bangumi/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -129,6 +136,13 @@
   
   <url>
     <loc>/donate/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/comment/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -143,13 +157,6 @@
   
   <url>
     <loc>/links/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/about/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -171,13 +178,6 @@
   
   <url>
     <loc>/theme-sakura/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/bangumi/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
