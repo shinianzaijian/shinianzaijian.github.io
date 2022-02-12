@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-02-11T14:22:37.618Z</updated>
+  <updated>2022-02-12T03:57:28.521Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二叉树退化成链表</title>
+    <link href="/null/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%80%80%E5%8C%96%E6%88%90%E9%93%BE%E8%A1%A8/"/>
+    <id>/null/二叉树退化成链表/</id>
+    <published>2022-02-12T03:54:48.000Z</published>
+    <updated>2022-02-12T03:57:28.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;二叉树根据深度优先遍历变成一个链表形式&quot;&gt;&lt;a href=&quot;#二叉树根据深度优先遍历变成一个链表形式&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>算法小技巧</title>

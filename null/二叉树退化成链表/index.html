@@ -14,25 +14,25 @@
     
     
     
-    <title>rss | Shown的部落阁</title>
+    <title>二叉树退化成链表 | Shown的部落阁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="blog, Shown的部落阁, 配置, 资源">
-    <meta name="description" content="用简洁的语言形容繁杂的配置">
-<meta name="keywords" content="blog, Shown的部落阁, 配置, 资源">
-<meta property="og:type" content="website">
-<meta property="og:title" content="rss">
-<meta property="og:url" content="/rss/index.html">
+    <meta name="keywords" content="算法">
+    <meta name="description" content="二叉树根据深度优先遍历变成一个链表形式class Solution {     List&amp;lt;TreeNode&amp;gt; nodes;     public void flatten(TreeNode root) {         nodes = new LinkedList();         dfs(root);         int n = nodes.size();">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树退化成链表">
+<meta property="og:url" content="/null/二叉树退化成链表/index.html">
 <meta property="og:site_name" content="Shown的部落阁">
-<meta property="og:description" content="用简洁的语言形容繁杂的配置">
+<meta property="og:description" content="二叉树根据深度优先遍历变成一个链表形式class Solution {     List&amp;lt;TreeNode&amp;gt; nodes;     public void flatten(TreeNode root) {         nodes = new LinkedList();         dfs(root);         int n = nodes.size();">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-03-16T10:41:30.000Z">
+<meta property="og:updated_time" content="2022-02-12T03:57:28.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="rss">
-<meta name="twitter:description" content="用简洁的语言形容繁杂的配置">
+<meta name="twitter:title" content="二叉树退化成链表">
+<meta name="twitter:description" content="二叉树根据深度优先遍历变成一个链表形式class Solution {     List&amp;lt;TreeNode&amp;gt; nodes;     public void flatten(TreeNode root) {         nodes = new LinkedList();         dfs(root);         int n = nodes.size();">
     
         <link rel="alternate" type="application/atom+xml" title="Shown的部落阁" href="/atom.xml">
     
@@ -120,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">rss</div>
+        <div class="flex-col header-title ellipsis">二叉树退化成链表</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -139,11 +139,19 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">rss</h1>
+        <h1 class="title">二叉树退化成链表</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2022-02-12T03:54:48.000Z" itemprop="datePublished" class="page-time">
+  2022-02-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
             
         </h5>
     </div>
@@ -155,19 +163,95 @@
 
 
 <div class="container body-wrap">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二叉树根据深度优先遍历变成一个链表形式"><span class="post-toc-number">1.</span> <span class="post-toc-text">二叉树根据深度优先遍历变成一个链表形式</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-二叉树退化成链表"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">二叉树退化成链表</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-02-12 11:54:48" datetime="2022-02-12T03:54:48.000Z"  itemprop="datePublished">2022-02-12</time>
+
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="二叉树根据深度优先遍历变成一个链表形式"><a href="#二叉树根据深度优先遍历变成一个链表形式" class="headerlink" title="二叉树根据深度优先遍历变成一个链表形式"></a>二叉树根据深度优先遍历变成一个链表形式</h2><pre><code>class Solution {
+    List&lt;TreeNode&gt; nodes;
+    public void flatten(TreeNode root) {
+        nodes = new LinkedList();
+        dfs(root);
+        int n = nodes.size();
+        for(int i = 1; i&lt;n; i++){
+            TreeNode pre = nodes.get(i -1) , curr = nodes.get(i);
+            pre.left = null;
+            pre.right = curr;
+        }
+
+    }
+    public void dfs(TreeNode root){
+        if(root == null){
+            return;
+        }
+        nodes.add(root);
+        dfs(root.left);
+        dfs(root.right);
+    }
+}
+</code></pre><p>先进行一个中序遍历，然后再把每个节点的左孩子节点设置为null，右孩子节点设置为下一个节点。</p>
+
         </div>
 
+        <blockquote class="post-copyright">
+    
+    <div class="content">
         
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>Shown Feng</strong></p>
-                <p><em></em></p>
-                <p>用户页面中作者相关的描述性文字，如不需要设为 false</p>
-            </div>
+<span class="post-time">
+    Last updated: <time datetime="2022-02-12T03:57:28.521Z" itemprop="dateUpdated">2022-02-12 11:57:28</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/null/二叉树退化成链表/" target="_blank" rel="external">/null/二叉树退化成链表/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" alt="Shown Feng">
+            Shown Feng
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -176,7 +260,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/rss/&title=《rss》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -186,22 +270,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/rss/&title=《rss》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/rss/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/二叉树退化成链表/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《rss》 — Shown的部落阁&url=/rss/&via=" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《二叉树退化成链表》 — Shown的部落阁&url=/null/二叉树退化成链表/&via=" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/rss/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/二叉树退化成链表/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -218,38 +302,47 @@
 
 
         </div>
-        
+    </div>
 
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </article>
     
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/null/算法小技巧/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">算法小技巧</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
 <div id="reward" class="page-modal reward-lay">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
@@ -275,6 +368,7 @@
         
     </div>
 </div>
+
 
 
 </div>
@@ -318,7 +412,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/rss/&title=《rss》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -328,22 +422,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/rss/&title=《rss》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/rss/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/二叉树退化成链表/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《rss》 — Shown的部落阁&url=/rss/&via=" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《二叉树退化成链表》 — Shown的部落阁&url=/null/二叉树退化成链表/&via=" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/rss/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/二叉树退化成链表/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -354,7 +448,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/rss/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/null/二叉树退化成链表/" alt="微信分享二维码">
 </div>
 
 
