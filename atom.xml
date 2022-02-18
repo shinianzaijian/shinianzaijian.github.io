@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-02-12T03:57:28.521Z</updated>
+  <updated>2022-02-18T14:53:27.493Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>位运算的妙用</title>
+    <link href="/null/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%A6%99%E7%94%A8/"/>
+    <id>/null/位运算的妙用/</id>
+    <published>2022-02-18T12:45:45.000Z</published>
+    <updated>2022-02-18T14:53:27.493Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、异或运算的妙用&quot;&gt;&lt;a href=&quot;#一、异或运算的妙用&quot; class=&quot;headerlink&quot; title=&quot;一、异或运算的妙用&quot;&gt;&lt;/a&gt;一、异或运算的妙用&lt;/h2&gt;&lt;h3 id=&quot;1、性质&quot;&gt;&lt;a href=&quot;#1、性质&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="底层" scheme="/tags/%E5%BA%95%E5%B1%82/"/>
+    
+  </entry>
   
   <entry>
     <title>二叉树退化成链表</title>
@@ -284,11 +312,11 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="技术" scheme="/tags/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="java" scheme="/tags/java/"/>
     
       <category term="游戏" scheme="/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+      <category term="技术" scheme="/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

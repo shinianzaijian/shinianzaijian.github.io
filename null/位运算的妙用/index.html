@@ -14,25 +14,25 @@
     
     
     
-    <title>二叉树退化成链表 | Shown的部落阁</title>
+    <title>位运算的妙用 | Shown的部落阁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="算法">
-    <meta name="description" content="二叉树根据深度优先遍历变成一个链表形式class Solution {     List&amp;lt;TreeNode&amp;gt; nodes;     public void flatten(TreeNode root) {         nodes = new LinkedList();         dfs(root);         int n = nodes.size();">
-<meta name="keywords" content="算法">
+    <meta name="keywords" content="算法,底层">
+    <meta name="description" content="一、异或运算的妙用1、性质// 无进位相加且满足交换律和结合律 a ^ a = 0; a ^ 0 = a;  // 若两数在内存当中的地址不同，相互交换可以写作 a = 1; b = 2; a = a ^ b; b = a ^ b; a = a ^ b; 注：若两数在内存当中地址相同，则会全部刷成0； 2.请问在一个数组中，如何找出唯一一个出现奇数次的数int[] arr = new int[3]">
+<meta name="keywords" content="算法,底层">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树退化成链表">
-<meta property="og:url" content="/null/二叉树退化成链表/index.html">
+<meta property="og:title" content="位运算的妙用">
+<meta property="og:url" content="/null/位运算的妙用/index.html">
 <meta property="og:site_name" content="Shown的部落阁">
-<meta property="og:description" content="二叉树根据深度优先遍历变成一个链表形式class Solution {     List&amp;lt;TreeNode&amp;gt; nodes;     public void flatten(TreeNode root) {         nodes = new LinkedList();         dfs(root);         int n = nodes.size();">
+<meta property="og:description" content="一、异或运算的妙用1、性质// 无进位相加且满足交换律和结合律 a ^ a = 0; a ^ 0 = a;  // 若两数在内存当中的地址不同，相互交换可以写作 a = 1; b = 2; a = a ^ b; b = a ^ b; a = a ^ b; 注：若两数在内存当中地址相同，则会全部刷成0； 2.请问在一个数组中，如何找出唯一一个出现奇数次的数int[] arr = new int[3]">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2022-02-12T03:57:28.521Z">
+<meta property="og:updated_time" content="2022-02-18T14:53:27.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树退化成链表">
-<meta name="twitter:description" content="二叉树根据深度优先遍历变成一个链表形式class Solution {     List&amp;lt;TreeNode&amp;gt; nodes;     public void flatten(TreeNode root) {         nodes = new LinkedList();         dfs(root);         int n = nodes.size();">
+<meta name="twitter:title" content="位运算的妙用">
+<meta name="twitter:description" content="一、异或运算的妙用1、性质// 无进位相加且满足交换律和结合律 a ^ a = 0; a ^ 0 = a;  // 若两数在内存当中的地址不同，相互交换可以写作 a = 1; b = 2; a = a ^ b; b = a ^ b; a = a ^ b; 注：若两数在内存当中地址相同，则会全部刷成0； 2.请问在一个数组中，如何找出唯一一个出现奇数次的数int[] arr = new int[3]">
     
         <link rel="alternate" type="application/atom+xml" title="Shown的部落阁" href="/atom.xml">
     
@@ -120,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">二叉树退化成链表</div>
+        <div class="flex-col header-title ellipsis">位运算的妙用</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,11 +142,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">二叉树退化成链表</h1>
+        <h1 class="title">位运算的妙用</h1>
         <h5 class="subtitle">
             
-                <time datetime="2022-02-12T03:54:48.000Z" itemprop="datePublished" class="page-time">
-  2022-02-12
+                <time datetime="2022-02-18T12:45:45.000Z" itemprop="datePublished" class="page-time">
+  2022-02-18
 </time>
 
 
@@ -167,18 +167,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二叉树根据深度优先遍历变成一个链表形式"><span class="post-toc-number">1.</span> <span class="post-toc-text">二叉树根据深度优先遍历变成一个链表形式</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、异或运算的妙用"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、异或运算的妙用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、性质"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1、性质</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-请问在一个数组中，如何找出唯一一个出现奇数次的数"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.请问在一个数组中，如何找出唯一一个出现奇数次的数</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、与运算的妙用"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、与运算的妙用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-怎么把一个int类型的数提取出最右侧的1来"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.怎么把一个int类型的数提取出最右侧的1来</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-请问在一个数组中，如何找出两个个出现奇数次的数"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.请问在一个数组中，如何找出两个个出现奇数次的数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-该数组中仅有一个出现k次的数字-且-m-gt-1-k-lt-m"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3.该数组中仅有一个出现k次的数字 且 m&gt;1, k&lt;m;</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-二叉树退化成链表"
+<article id="post-位运算的妙用"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">二叉树退化成链表</h1>
+        <h1 class="post-card-title">位运算的妙用</h1>
         <div class="post-meta">
-            <time class="post-time" title="2022-02-12 11:54:48" datetime="2022-02-12T03:54:48.000Z"  itemprop="datePublished">2022-02-12</time>
+            <time class="post-time" title="2022-02-18 20:45:45" datetime="2022-02-18T12:45:45.000Z"  itemprop="datePublished">2022-02-18</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
@@ -193,30 +193,65 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="二叉树根据深度优先遍历变成一个链表形式"><a href="#二叉树根据深度优先遍历变成一个链表形式" class="headerlink" title="二叉树根据深度优先遍历变成一个链表形式"></a>二叉树根据深度优先遍历变成一个链表形式</h2><pre><code>class Solution {
-    List&lt;TreeNode&gt; nodes;
-    public void flatten(TreeNode root) {
-        nodes = new LinkedList();
-        dfs(root);
-        int n = nodes.size();
-        for(int i = 1; i&lt;n; i++){
-            TreeNode pre = nodes.get(i -1) , curr = nodes.get(i);
-            pre.left = null;
-            pre.right = curr;
-        }
+            <h2 id="一、异或运算的妙用"><a href="#一、异或运算的妙用" class="headerlink" title="一、异或运算的妙用"></a>一、异或运算的妙用</h2><h3 id="1、性质"><a href="#1、性质" class="headerlink" title="1、性质"></a>1、性质</h3><pre><code>// 无进位相加且满足交换律和结合律
+a ^ a = 0;
+a ^ 0 = a;
 
-    }
-    public void dfs(TreeNode root){
-        if(root == null){
-            return;
-        }
-        nodes.add(root);
-        dfs(root.left);
-        dfs(root.right);
+// 若两数在内存当中的地址不同，相互交换可以写作
+a = 1;
+b = 2;
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+注：若两数在内存当中地址相同，则会全部刷成0；
+</code></pre><h3 id="2-请问在一个数组中，如何找出唯一一个出现奇数次的数"><a href="#2-请问在一个数组中，如何找出唯一一个出现奇数次的数" class="headerlink" title="2.请问在一个数组中，如何找出唯一一个出现奇数次的数"></a>2.请问在一个数组中，如何找出唯一一个出现奇数次的数</h3><pre><code>int[] arr = new int[3]{1,2,2} 
+int eor = 0;
+// 和数组当中的每一位去异或
+for(int i=0;i&lt;arr.length;i++){
+    aor ^= arr[i];
+}
+return eor;
+</code></pre><h2 id="二、与运算的妙用"><a href="#二、与运算的妙用" class="headerlink" title="二、与运算的妙用"></a>二、与运算的妙用</h2><h3 id="1-怎么把一个int类型的数提取出最右侧的1来"><a href="#1-怎么把一个int类型的数提取出最右侧的1来" class="headerlink" title="1.怎么把一个int类型的数提取出最右侧的1来"></a>1.怎么把一个int类型的数提取出最右侧的1来</h3><pre><code>-a = ~a+1;
+a &amp;= (-a); // 该步运算则可以取出int类型的数的最右侧的1;
+</code></pre><h3 id="2-请问在一个数组中，如何找出两个个出现奇数次的数"><a href="#2-请问在一个数组中，如何找出两个个出现奇数次的数" class="headerlink" title="2.请问在一个数组中，如何找出两个个出现奇数次的数"></a>2.请问在一个数组中，如何找出两个个出现奇数次的数</h3><pre><code>int[] arr = new int[3]{1,2,2} 
+int eor = 0;
+// 和数组当中的每一位去异或
+for(int i=0;i&lt;arr.length;i++){
+    aor ^= arr[i];
+}
+// 最后异或结果就为 两个出现奇数次异或
+aor = a ^ b;
+// 抓取出一类中的数
+onlyOne = 0;
+// 找出最后一位为1的int类型的数
+aor&#39; = aor &amp; (~aor + 1);
+// 因为该数组可分为两组 根据以上左后一位为1的int类型的数
+for(int i=0;i&lt;arr.length;i++){
+    if(aor &amp; arr[i] != 0){
+        onlyOne ^= arr[i];
     }
 }
-</code></pre><p>先进行一个中序遍历，然后再把每个节点的左孩子节点设置为null，右孩子节点设置为下一个节点。</p>
-
+// 另外一个出现奇数次的数
+aor ^= onlyOne;
+</code></pre><h3 id="3-该数组中仅有一个出现k次的数字-且-m-gt-1-k-lt-m"><a href="#3-该数组中仅有一个出现k次的数字-且-m-gt-1-k-lt-m" class="headerlink" title="3.该数组中仅有一个出现k次的数字 且 m&gt;1, k&lt;m;"></a>3.该数组中仅有一个出现k次的数字 且 m&gt;1, k&lt;m;</h3><pre><code>// 该数组中仅有一个出现k次的数字 且 m&gt;1, k&lt;m;
+    public static int onlyOneTimes(int[] arr, int k, int m){
+        // 新建一个32位数组存放每个数字的标志位
+        int[] t = new int[32];
+        for (int i : arr) {
+            for (int j = 0; j &lt;= 31; j++) {
+                t[j] += ((i &gt;&gt; j) &amp; 1);
+            }
+        }
+        int ans = 0;
+        for (int i = 0; i &lt; t.length; i++) {
+            // 说明该数字在i位置为1
+            if (t[i] % m != 0){
+                ans |= (1 &lt;&lt; i);
+            }
+        }
+        return ans;
+    }
+</code></pre>
         </div>
 
         <blockquote class="post-copyright">
@@ -224,12 +259,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-02-12T03:57:28.521Z" itemprop="dateUpdated">2022-02-12 11:57:28</time>
+    Last updated: <time datetime="2022-02-18T14:53:27.493Z" itemprop="dateUpdated">2022-02-18 22:53:27</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/null/二叉树退化成链表/" target="_blank" rel="external">/null/二叉树退化成链表/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/null/位运算的妙用/" target="_blank" rel="external">/null/位运算的妙用/</a>
         
     </div>
     
@@ -250,7 +285,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/底层/">底层</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
 
 
             
@@ -260,7 +295,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/位运算的妙用/&title=《位运算的妙用》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -270,22 +305,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/位运算的妙用/&title=《位运算的妙用》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/二叉树退化成链表/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/位运算的妙用/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《二叉树退化成链表》 — Shown的部落阁&url=/null/二叉树退化成链表/&via=" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《位运算的妙用》 — Shown的部落阁&url=/null/位运算的妙用/&via=" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/二叉树退化成链表/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/位运算的妙用/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -305,21 +340,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/null/位运算的妙用/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">位运算的妙用</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/null/算法小技巧/" id="post-next" class="post-nav-link">
+      <a href="/null/二叉树退化成链表/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">算法小技巧</h4>
+        <h4 class="title">二叉树退化成链表</h4>
       </a>
     </div>
   
@@ -419,7 +447,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/位运算的妙用/&title=《位运算的妙用》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -429,22 +457,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/二叉树退化成链表/&title=《二叉树退化成链表》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/位运算的妙用/&title=《位运算的妙用》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/二叉树退化成链表/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/位运算的妙用/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《二叉树退化成链表》 — Shown的部落阁&url=/null/二叉树退化成链表/&via=" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《位运算的妙用》 — Shown的部落阁&url=/null/位运算的妙用/&via=" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/二叉树退化成链表/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/位运算的妙用/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -455,7 +483,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/null/二叉树退化成链表/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/null/位运算的妙用/" alt="微信分享二维码">
 </div>
 
 
