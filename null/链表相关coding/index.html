@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Shown的部落阁">
 <meta property="og:description" content="链表的基础操作–对于边界条件的思考1.反转链表public static class Lnode{     public int value;     public Lnode next;      public Lnode(int value) {         this.value = value;     } }  /**     * 反转链表     * @param head">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2022-02-19T08:34:12.787Z">
+<meta property="og:updated_time" content="2022-02-19T08:44:29.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链表相关coding">
 <meta name="twitter:description" content="链表的基础操作–对于边界条件的思考1.反转链表public static class Lnode{     public int value;     public Lnode next;      public Lnode(int value) {         this.value = value;     } }  /**     * 反转链表     * @param head">
@@ -307,7 +307,7 @@ public Lnode deleteLnode(Lnode head, int val){
      * @return
      */
     public int nextIndex(int index){
-        return index == limit - 1 ? 0 : index;
+        return index &lt; limit - 1 ? index+1 : 0;
     }
 }
 </code></pre>
@@ -318,7 +318,7 @@ public Lnode deleteLnode(Lnode head, int val){
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-02-19T08:34:12.787Z" itemprop="dateUpdated">2022-02-19 16:34:12</time>
+    Last updated: <time datetime="2022-02-19T08:44:29.928Z" itemprop="dateUpdated">2022-02-19 16:44:29</time>
 </span><br>
 
 
