@@ -14,25 +14,25 @@
     
     
     
-    <title>链表相关coding | Shown的部落阁</title>
+    <title>栈和队列互相转换 | Shown的部落阁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="算法,数据结构">
-    <meta name="description" content="链表的基础操作–对于边界条件的思考1.反转链表public static class Lnode{     public int value;     public Lnode next;      public Lnode(int value) {         this.value = value;     } }  /**     * 反转链表     * @param head">
+    <meta name="description" content="使用双栈实现队列public class TwoStarkQueue {     public Stack&amp;lt;Integer&amp;gt; popStack;     public Stack&amp;lt;Integer&amp;gt; pushStack;      public TwoStarkQueue() {         this.popStack = new Stack&amp;lt;&amp;gt;();">
 <meta name="keywords" content="算法,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="链表相关coding">
-<meta property="og:url" content="/null/链表相关coding/index.html">
+<meta property="og:title" content="栈和队列互相转换">
+<meta property="og:url" content="/null/栈和队列互相转换/index.html">
 <meta property="og:site_name" content="Shown的部落阁">
-<meta property="og:description" content="链表的基础操作–对于边界条件的思考1.反转链表public static class Lnode{     public int value;     public Lnode next;      public Lnode(int value) {         this.value = value;     } }  /**     * 反转链表     * @param head">
+<meta property="og:description" content="使用双栈实现队列public class TwoStarkQueue {     public Stack&amp;lt;Integer&amp;gt; popStack;     public Stack&amp;lt;Integer&amp;gt; pushStack;      public TwoStarkQueue() {         this.popStack = new Stack&amp;lt;&amp;gt;();">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2022-02-19T08:44:29.928Z">
+<meta property="og:updated_time" content="2022-02-19T14:17:30.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="链表相关coding">
-<meta name="twitter:description" content="链表的基础操作–对于边界条件的思考1.反转链表public static class Lnode{     public int value;     public Lnode next;      public Lnode(int value) {         this.value = value;     } }  /**     * 反转链表     * @param head">
+<meta name="twitter:title" content="栈和队列互相转换">
+<meta name="twitter:description" content="使用双栈实现队列public class TwoStarkQueue {     public Stack&amp;lt;Integer&amp;gt; popStack;     public Stack&amp;lt;Integer&amp;gt; pushStack;      public TwoStarkQueue() {         this.popStack = new Stack&amp;lt;&amp;gt;();">
     
         <link rel="alternate" type="application/atom+xml" title="Shown的部落阁" href="/atom.xml">
     
@@ -120,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">链表相关coding</div>
+        <div class="flex-col header-title ellipsis">栈和队列互相转换</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,10 +142,10 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">链表相关coding</h1>
+        <h1 class="title">栈和队列互相转换</h1>
         <h5 class="subtitle">
             
-                <time datetime="2022-02-19T03:27:10.000Z" itemprop="datePublished" class="page-time">
+                <time datetime="2022-02-19T09:02:36.000Z" itemprop="datePublished" class="page-time">
   2022-02-19
 </time>
 
@@ -167,18 +167,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#链表的基础操作–对于边界条件的思考"><span class="post-toc-number">1.</span> <span class="post-toc-text">链表的基础操作–对于边界条件的思考</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-反转链表"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.反转链表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-数组实现队列"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.数组实现队列</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用双栈实现队列"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用双栈实现队列</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-链表相关coding"
+<article id="post-栈和队列互相转换"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">链表相关coding</h1>
+        <h1 class="post-card-title">栈和队列互相转换</h1>
         <div class="post-meta">
-            <time class="post-time" title="2022-02-19 11:27:10" datetime="2022-02-19T03:27:10.000Z"  itemprop="datePublished">2022-02-19</time>
+            <time class="post-time" title="2022-02-19 17:02:36" datetime="2022-02-19T09:02:36.000Z"  itemprop="datePublished">2022-02-19</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
@@ -193,121 +193,38 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="链表的基础操作–对于边界条件的思考"><a href="#链表的基础操作–对于边界条件的思考" class="headerlink" title="链表的基础操作–对于边界条件的思考"></a>链表的基础操作–对于边界条件的思考</h2><h3 id="1-反转链表"><a href="#1-反转链表" class="headerlink" title="1.反转链表"></a>1.反转链表</h3><pre><code>public static class Lnode{
-    public int value;
-    public Lnode next;
+            <h2 id="使用双栈实现队列"><a href="#使用双栈实现队列" class="headerlink" title="使用双栈实现队列"></a>使用双栈实现队列</h2><pre><code>public class TwoStarkQueue {
+    public Stack&lt;Integer&gt; popStack;
+    public Stack&lt;Integer&gt; pushStack;
 
-    public Lnode(int value) {
-        this.value = value;
-    }
-}
-
-/**
-    * 反转链表
-    * @param head
-    * @return
-    */
-public Lnode reverseLnode(Lnode head){
-    Lnode pre = null;
-    Lnode next = null;
-    while (head != null){
-        next = head.next;
-        head.next = pre;
-        pre = head;
-        head = next;
-    }
-    return  pre;
-}
-
-/**
-    * 删除链表中值为val的节点
-    * @param head
-    * @param val
-    * @return
-    */
-public Lnode deleteLnode(Lnode head, int val){
-    // 将头节点清空
-    while (head != null){
-        if (head.value != val){
-            break;
-        }
-        head = head.next;
-    }
-
-    // head == null or head != null
-    Lnode pre = head;
-    Lnode cur = head;
-    while (cur != null){
-        // 如果当前节点值相同，则前置节点指向当前节点的下一个节点
-        if (cur.value == val){
-            pre.next = cur.next;
-        }else {
-            // 如果不同则直接前置节点向后移动
-            pre = cur;
-        }
-        // 保持当前节点始终在前置节点之后
-        cur = cur.next;
-    }
-    // 返回节点头部
-    return head;
-}
-</code></pre><h3 id="2-数组实现队列"><a href="#2-数组实现队列" class="headerlink" title="2.数组实现队列"></a>2.数组实现队列</h3><pre><code>public class ArrToQueue {
-    public int[] arr;
-    public int limit;
-    public int end;
-    public int begin;
-    public int size;
-
-    public ArrToQueue(int limit) {
-        this.arr = new int[limit];
-        this.end = 0;
-        this.begin = 0;
-        this.size = 0;
+    public TwoStarkQueue() {
+        this.popStack = new Stack&lt;&gt;();
+        this.pushStack = new Stack&lt;&gt;();
     }
 
     /**
-     * 向队列中放入元素
-     * @param val
+     * 将push栈中的数据全部倒进pop栈
      */
+    private void pushToPop(){
+        if (popStack.isEmpty()){
+            while (!pushStack.isEmpty()){
+                popStack.add(pushStack.pop());
+            }
+        }
+    }
+
     public void pull(int val){
-        if (size == limit){
-            System.out.println(&quot;队列满了！&quot;);
-            return;
+        pushStack.add(val);
+        pushToPop();
+    }
+
+    public Integer pop(){
+        if (popStack.isEmpty()){
+            System.out.println(&quot;该栈为空！&quot;);
+            return null;
         }
-        arr[end] = val;
-        size++;
-        end = nextIndex(end);
-    }
-
-    /**
-     * 队列中弹出元素
-     * @return
-     */
-    public int pop(){
-        if (size == 0){
-            System.out.println(&quot;队列为空&quot;);
-        }
-        int ans = arr[begin];
-        size--;
-        begin = nextIndex(begin);
-        return ans;
-    }
-
-    /**
-     * 判断队列是否为空
-     * @return
-     */
-    public boolean isEmpty(){
-        return size == 0;
-    }
-
-    /**
-     * 判断下标是否到达最后一个，若是的话返回0，不是的话返回自身
-     * @param index
-     * @return
-     */
-    public int nextIndex(int index){
-        return index &lt; limit - 1 ? index+1 : 0;
+        pushToPop();
+        return popStack.pop();
     }
 }
 </code></pre>
@@ -318,12 +235,12 @@ public Lnode deleteLnode(Lnode head, int val){
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-02-19T08:44:29.928Z" itemprop="dateUpdated">2022-02-19 16:44:29</time>
+    Last updated: <time datetime="2022-02-19T14:17:30.812Z" itemprop="dateUpdated">2022-02-19 22:17:30</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/null/链表相关coding/" target="_blank" rel="external">/null/链表相关coding/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/null/栈和队列互相转换/" target="_blank" rel="external">/null/栈和队列互相转换/</a>
         
     </div>
     
@@ -354,7 +271,7 @@ public Lnode deleteLnode(Lnode head, int val){
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/链表相关coding/&title=《链表相关coding》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/栈和队列互相转换/&title=《栈和队列互相转换》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -364,22 +281,22 @@ public Lnode deleteLnode(Lnode head, int val){
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/链表相关coding/&title=《链表相关coding》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/栈和队列互相转换/&title=《栈和队列互相转换》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/链表相关coding/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/栈和队列互相转换/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《链表相关coding》 — Shown的部落阁&url=/null/链表相关coding/&via=" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《栈和队列互相转换》 — Shown的部落阁&url=/null/栈和队列互相转换/&via=" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/链表相关coding/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/栈和队列互相转换/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -399,21 +316,14 @@ public Lnode deleteLnode(Lnode head, int val){
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/null/栈和队列互相转换/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">栈和队列互相转换</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/null/位运算的妙用/" id="post-next" class="post-nav-link">
+      <a href="/null/链表相关coding/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">位运算的妙用</h4>
+        <h4 class="title">链表相关coding</h4>
       </a>
     </div>
   
@@ -513,7 +423,7 @@ public Lnode deleteLnode(Lnode head, int val){
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/链表相关coding/&title=《链表相关coding》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/null/栈和队列互相转换/&title=《栈和队列互相转换》 — Shown的部落阁&pic=https://cdn.jsdelivr.net/gh/shinianzaijian/CDN/images/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -523,22 +433,22 @@ public Lnode deleteLnode(Lnode head, int val){
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/链表相关coding/&title=《链表相关coding》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/null/栈和队列互相转换/&title=《栈和队列互相转换》 — Shown的部落阁&source=用简洁的语言形容繁杂的配置" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/链表相关coding/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/null/栈和队列互相转换/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《链表相关coding》 — Shown的部落阁&url=/null/链表相关coding/&via=" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《栈和队列互相转换》 — Shown的部落阁&url=/null/栈和队列互相转换/&via=" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/链表相关coding/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/null/栈和队列互相转换/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -549,7 +459,7 @@ public Lnode deleteLnode(Lnode head, int val){
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/null/链表相关coding/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/null/栈和队列互相转换/" alt="微信分享二维码">
 </div>
 
 
