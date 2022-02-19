@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Shown的部落阁">
 <meta property="og:description" content="使用双栈实现队列public class TwoStarkQueue {     public Stack&amp;lt;Integer&amp;gt; popStack;     public Stack&amp;lt;Integer&amp;gt; pushStack;      public TwoStarkQueue() {         this.popStack = new Stack&amp;lt;&amp;gt;();">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2022-02-19T14:17:30.812Z">
+<meta property="og:updated_time" content="2022-02-19T14:52:26.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="栈和队列互相转换">
 <meta name="twitter:description" content="使用双栈实现队列public class TwoStarkQueue {     public Stack&amp;lt;Integer&amp;gt; popStack;     public Stack&amp;lt;Integer&amp;gt; pushStack;      public TwoStarkQueue() {         this.popStack = new Stack&amp;lt;&amp;gt;();">
@@ -167,7 +167,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用双栈实现队列"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用双栈实现队列</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用双栈实现队列"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用双栈实现队列</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用双队列实现栈"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用双队列实现栈</span></a></li></ol>
         </nav>
     </aside>
 
@@ -227,6 +227,48 @@
         return popStack.pop();
     }
 }
+</code></pre><h2 id="使用双队列实现栈"><a href="#使用双队列实现栈" class="headerlink" title="使用双队列实现栈"></a>使用双队列实现栈</h2><pre><code>/**
+ * 使用两个队列实现栈的操作
+ * 每次弹出时 都 将队列的最后一个弹出即可
+ * 然后再讲两个队列的引用交换
+ */
+public class TwoQueueStack {
+
+    public Queue&lt;Integer&gt; queue;
+    public Queue&lt;Integer&gt; help;
+
+
+    public TwoQueueStack() {
+        this.queue = new LinkedList&lt;&gt;();
+        this.help = new LinkedList&lt;&gt;();
+    }
+
+    public void offer(Integer pullInt){
+        queue.offer(pullInt);
+    }
+
+    public Integer poll(){
+        while (queue.size() &gt; 1){
+            help.offer(queue.poll());
+        }
+        Integer ans = queue.poll();
+        Queue&lt;Integer&gt; temp = queue;
+        queue = help;
+        help = temp;
+        return ans;
+    }
+
+    public Integer peek(){
+        while (queue.size() &gt; 1){
+            help.offer(queue.poll());
+        }
+        Integer ans = queue.peek();
+        Queue&lt;Integer&gt; temp = queue;
+        queue = help;
+        help = temp;
+        return ans;
+    }
+}
 </code></pre>
         </div>
 
@@ -235,7 +277,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-02-19T14:17:30.812Z" itemprop="dateUpdated">2022-02-19 22:17:30</time>
+    Last updated: <time datetime="2022-02-19T14:52:26.330Z" itemprop="dateUpdated">2022-02-19 22:52:26</time>
 </span><br>
 
 
