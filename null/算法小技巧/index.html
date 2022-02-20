@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Shown的部落阁">
 <meta property="og:description" content="算法与数据结构的技巧leetcode 103 题中可用实现来转换成返回后的数据结构 /**  * Definition for a binary tree node.  * public class TreeNode {  *     int val;  *     TreeNode left;  *     TreeNode right;  *     TreeNode() {}  *">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2022-02-11T14:22:37.618Z">
+<meta property="og:updated_time" content="2022-02-20T03:26:18.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法小技巧">
 <meta name="twitter:description" content="算法与数据结构的技巧leetcode 103 题中可用实现来转换成返回后的数据结构 /**  * Definition for a binary tree node.  * public class TreeNode {  *     int val;  *     TreeNode left;  *     TreeNode right;  *     TreeNode() {}  *">
@@ -167,7 +167,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法与数据结构的技巧"><span class="post-toc-number">1.</span> <span class="post-toc-text">算法与数据结构的技巧</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法与数据结构的技巧"><span class="post-toc-number">1.</span> <span class="post-toc-text">算法与数据结构的技巧</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#归并排序的非递归实现"><span class="post-toc-number">2.</span> <span class="post-toc-text">归并排序的非递归实现</span></a></li></ol>
         </nav>
     </aside>
 
@@ -238,7 +238,57 @@ class Solution {
     }
 }
 </code></pre><p>其上的Deque可用LinkedList进行实现<br>同样也可以用LinkedList来接收Deque</p>
+<h2 id="归并排序的非递归实现"><a href="#归并排序的非递归实现" class="headerlink" title="归并排序的非递归实现"></a>归并排序的非递归实现</h2><pre><code>class Solution {
+    public int[] sortArray(int[] nums) {
+        if(nums.length &lt;= 1) return nums;
+        // 步长
+        int mergeSize = 1;
+        int N = nums.length;
+        while(mergeSize &lt; N){
+            // 左组的第一个指针
+            int L = 0;
+            while(L &lt; N){
+                // 右组的第一个指针
+                int M = L+mergeSize-1;
+                if(M &gt;= N){
+                    break;
+                }
+                int R = Math.min(M+mergeSize, N-1);
+                mergeSort(nums, L, M, R);
+                L= R+1;
+            }
+            if(mergeSize &gt; N / 2){
+                break;
+            }
+            mergeSize &lt;&lt;= 1;
+        }
+        return nums;
+    }
 
+    public void mergeSort(int[] arr, int l, int mid, int r){
+        int[] help = new int[r-l+1];
+        int i = 0;
+        int p1 = l;
+        int p2 = mid+1;
+        while(p1&lt;=mid &amp;&amp; p2&lt;=r){
+            help[i++] = arr[p1]&gt;=arr[p2] ? arr[p2++] : arr[p1++];
+        }
+        // 当p1越界时
+        while(p2 &lt;= r){
+            help[i++] = arr[p2++];
+        }
+        // 当p2越界时
+        while(p1 &lt;= mid){
+            help[i++] = arr[p1++];
+        }
+        for(int j=0;j&lt;help.length;j++){
+            arr[l+j] = help[j];
+        }
+    }
+
+
+}
+</code></pre>
         </div>
 
         <blockquote class="post-copyright">
@@ -246,7 +296,7 @@ class Solution {
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-02-11T14:22:37.618Z" itemprop="dateUpdated">2022-02-11 22:22:37</time>
+    Last updated: <time datetime="2022-02-20T03:26:18.235Z" itemprop="dateUpdated">2022-02-20 11:26:18</time>
 </span><br>
 
 

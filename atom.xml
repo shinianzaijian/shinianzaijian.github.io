@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-02-19T16:20:05.683Z</updated>
+  <updated>2022-02-20T14:33:06.540Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小和问题</title>
+    <link href="/null/%E5%B0%8F%E5%92%8C%E9%97%AE%E9%A2%98/"/>
+    <id>/null/小和问题/</id>
+    <published>2022-02-20T14:31:56.000Z</published>
+    <updated>2022-02-20T14:33:06.540Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;小和问题–逆向思维-使用归并思想&quot;&gt;&lt;a href=&quot;#小和问题–逆向思维-使用归并思想&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>刻在骨子里面的算法</title>
@@ -156,7 +182,7 @@
     <link href="/null/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>/null/算法小技巧/</id>
     <published>2022-02-11T14:18:51.000Z</published>
-    <updated>2022-02-11T14:22:37.618Z</updated>
+    <updated>2022-02-20T03:26:18.235Z</updated>
     
     <summary type="html">
     
