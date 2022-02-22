@@ -159,6 +159,64 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-集群内并发LVS"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2022-02-22 20:49:28" datetime="2022-02-22T12:49:28.000Z"  itemprop="datePublished">2022-02-22</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/null/集群内并发LVS/">集群内并发LVS</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        http协议
+这是一个应用层的协议，是一种规范，标准。
+先建立内核态的连接，然后再进行传输数据；
+内核态的连接有TCP和UDP
+
+TCP的三次握手
+需要分两个角度看待TCP建立的可靠连接，首先保证客户端发送和收到两条信息进行确认，然后同样服务端也需要发送和接收两条信息进行确认。所以TCP连接必须进行三次握手。
+
+
+客户端进行发送信息（send）
+服务器接收到信息并返回确认（ack）
+客户端回...
+    
+
+        <a href="/null/集群内并发LVS/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/系统底层/">系统底层</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络/">网络</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-小和问题"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -362,64 +420,6 @@ class Solution {
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-位运算的妙用"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2022-02-18 20:45:45" datetime="2022-02-18T12:45:45.000Z"  itemprop="datePublished">2022-02-18</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/null/位运算的妙用/">位运算的妙用</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        一、异或运算的妙用1、性质// 无进位相加且满足交换律和结合律
-a ^ a = 0;
-a ^ 0 = a;
-
-// 若两数在内存当中的地址不同，相互交换可以写作
-a = 1;
-b = 2;
-a = a ^ b;
-b = a ^ b;
-a = a ^ b;
-注：若两数在内存当中地址相同，则会全部刷成0；
-2.请问在一个数组中，如何找出唯一一个出现奇数次的数int[] arr = new int...
-    
-
-        <a href="/null/位运算的妙用/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/底层/">底层</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
 
     </div>
     
